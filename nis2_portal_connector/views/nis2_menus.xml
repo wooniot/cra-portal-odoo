@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_nis2_root" name="NIS2" sequence="91"
+              web_icon="nis2_portal_connector,static/description/icon.png"/>
+    <menuitem id="menu_nis2_status" name="Readiness" parent="menu_nis2_root"
+              action="action_nis2_status" sequence="10"/>
+</odoo>

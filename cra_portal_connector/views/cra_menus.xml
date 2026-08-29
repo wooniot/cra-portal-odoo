@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- CRA product list (SKU'd products with their keurmerk status) -->
+    <record id="view_cra_product_tree" model="ir.ui.view">
+        <field name="name">cra.product.tree</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <tree string="CRA products" create="false">
+                <field name="default_code" string="SKU"/>
+                <field name="name"/>
+                <field name="cra_status" widget="badge"
+                       decoration-success="cra_status == 'green'"
+                       decoration-warning="cra_status == 'amber'"
+                       decoration-danger="cra_status == 'red'"/>
+                <field name="cra_auth_code" optional="hide"/>
+                <field name="cra_last_sync"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_cra_products" model="ir.actions.act_window">
+        <field name="name">CRA Products</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('default_code', '!=', False)]</field>
+        <field name="view_id" ref="view_cra_product_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No products with an SKU yet</p>
+            <p>Give your products an Internal Reference (SKU) that matches CRA-Portal,
+               then use <b>Action &#8594; Sync CRA status</b> to pull their keurmerk.</p>
+        </field>
+    </record>
+
+    <!-- "Sync CRA status (all)" in the product Action menu -->
+    <record id="action_server_cra_sync_all" model="ir.actions.server">
+        <field name="name">Sync CRA status (all)</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="binding_model_id" ref="product.model_product_template"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">action = model.action_cra_sync_all()</field>
+    </record>
+
+    <menuitem id="menu_cra_root" name="CRA Compliance" sequence="90"
+              web_icon="cra_portal_connector,static/description/icon.png"/>
+    <menuitem id="menu_cra_products" name="Products" parent="menu_cra_root"
+              action="action_cra_products" sequence="10"/>
+</odoo>
