@@ -38,7 +38,7 @@ class Nis2PortalClient(models.AbstractModel):
             resp = requests.get(url, auth=(client_id, secret), timeout=timeout,
                                 headers={"Accept": "application/json"})
         except Exception as exc:  # noqa: BLE001
-            _logger.warning("NIS2-Portal request failed: %s", exc)
+            _logger.warning("NIS2-Portal request failed: %s", type(exc).__name__)
             raise UserError(_("Could not reach CRA-Portal (%s).") % exc)
         if resp.status_code == 401:
             raise UserError(_("CRA-Portal rejected the API key (401). Check client id/secret."))

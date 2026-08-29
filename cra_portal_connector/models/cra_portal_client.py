@@ -43,7 +43,7 @@ class CraPortalClient(models.AbstractModel):
                 headers={"Accept": "application/json"},
             )
         except Exception as exc:  # noqa: BLE001 - surface any network error to the user
-            _logger.warning("CRA-Portal request failed: %s", exc)
+            _logger.warning("CRA-Portal request failed: %s", type(exc).__name__)
             raise UserError(_("Could not reach CRA-Portal (%s).") % exc)
 
         if resp.status_code == 401:
