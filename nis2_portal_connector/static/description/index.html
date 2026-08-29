@@ -1,0 +1,24 @@
+<section style="font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:0 auto;color:#0b1a3a">
+  <div style="background:#003399;color:#fff;padding:28px 32px;border-radius:12px">
+    <h1 style="margin:0;font-size:30px">NIS2-Portal Connector</h1>
+    <p style="margin:8px 0 0;font-size:16px;opacity:.9">Your organisation's NIS2 readiness inside Odoo — traffic-light status, Article 21 score and keurmerk.</p>
+  </div>
+
+  <h2 style="color:#003399;margin-top:26px">What it does</h2>
+  <ul style="font-size:15px;line-height:1.7">
+    <li><b>NIS2 readiness dashboard</b> — a live traffic-light (compliant / in progress / not compliant), your Article&nbsp;21 measure score and the organisation keurmerk (auth code + public verify link and badge).</li>
+    <li><b>Standalone</b> — install NIS2 on its own; no dependency on the CRA product module.</li>
+    <li><b>One place</b> — see your NIS2 posture next to the rest of your operations in Odoo.</li>
+  </ul>
+
+  <h2 style="color:#003399">How it works</h2>
+  <p style="font-size:15px;line-height:1.7">Odoo is your base ERP; <b>CRA-Portal</b> runs the NIS2 (Directive (EU) 2022/2555) assessment. This connector reads your readiness over a secure Partner-API key. Configure it under <b>Settings &#8594; NIS2-Portal</b> and press <i>Test connection</i>.</p>
+
+  <h2 style="color:#003399">Requirements</h2>
+  <ul style="font-size:15px;line-height:1.7">
+    <li>An active CRA-Portal subscription and a Partner-API key (scope <code>nis2:read</code>).</li>
+    <li>Python <code>requests</code> on the Odoo server.</li>
+  </ul>
+
+  <p style="font-size:13px;color:#5d6b86;margin-top:24px">Woon IoT BV · <a href="https://cra-portal.eu" style="color:#003399">cra-portal.eu</a> · info@cra-portal.eu — This module surfaces readiness status; it is not legal or security advice.</p>
+</section>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="cra_base_url_param" model="ir.config_parameter">
+        <field name="key">cra_portal_connector.base_url</field>
+        <field name="value">https://dev.cra-portal.eu</field>
+    </record>
+</odoo>

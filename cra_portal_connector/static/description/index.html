@@ -1,0 +1,25 @@
+<section style="font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:0 auto;color:#0b1a3a">
+  <div style="background:#003399;color:#fff;padding:28px 32px;border-radius:12px">
+    <h1 style="margin:0;font-size:30px">CRA-Portal Connector</h1>
+    <p style="margin:8px 0 0;font-size:16px;opacity:.9">Cyber Resilience Act compliance status inside Odoo — product keurmerk, verify links and the 24h/72h incident process.</p>
+  </div>
+
+  <h2 style="color:#003399;margin-top:26px">What it does</h2>
+  <ul style="font-size:15px;line-height:1.7">
+    <li><b>CRA Compliance tab on products</b> — live keurmerk status (compliant / in progress / not compliant), the public verify link and badge, matched to CRA-Portal on the product SKU.</li>
+    <li><b>One-click sync</b> — <i>Action &#8594; Sync CRA status</i> refreshes every product in a single call.</li>
+    <li><b>Incident-ready</b> — a direct link to the self-service incident-response tool: the CRA Article&nbsp;14 reporting process (RACI, 24h / 72h / final report) plus a tabletop drill.</li>
+    <li><b>NIS2</b> — organisation readiness is available via the companion <i>NIS2-Portal Connector</i> module.</li>
+  </ul>
+
+  <h2 style="color:#003399">How it works</h2>
+  <p style="font-size:15px;line-height:1.7">Odoo is your base ERP; <b>CRA-Portal</b> (Regulation (EU) 2024/2847) delivers the compliance engine. This connector talks to your CRA-Portal Partner-API over a secure key. Configure it under <b>Settings &#8594; CRA-Portal</b> and press <i>Test connection</i>.</p>
+
+  <h2 style="color:#003399">Requirements</h2>
+  <ul style="font-size:15px;line-height:1.7">
+    <li>An active CRA-Portal subscription and a Partner-API key (scopes <code>products:read</code>, <code>keurmerk:read</code>).</li>
+    <li>Python <code>requests</code> on the Odoo server.</li>
+  </ul>
+
+  <p style="font-size:13px;color:#5d6b86;margin-top:24px">Woon IoT BV · <a href="https://cra-portal.eu" style="color:#003399">cra-portal.eu</a> · info@cra-portal.eu — This module surfaces compliance status; it is not legal or security advice.</p>
+</section>

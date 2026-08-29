@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_nis2" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.nis2</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="NIS2-Portal" name="nis2_portal_connector"
+                     logo="/nis2_portal_connector/static/description/icon.png">
+                    <block title="NIS2-Portal connection" name="nis2_portal_conn_block">
+                        <setting string="Base URL" help="The CRA-Portal instance you connect to.">
+                            <field name="nis2_portal_base_url" placeholder="https://dev.cra-portal.eu"/>
+                        </setting>
+                        <setting string="Partner-API key"
+                                 help="Client id and secret issued by CRA-Portal (scope: nis2:read).">
+                            <div class="content-group">
+                                <div class="row">
+                                    <field name="nis2_portal_client_id" placeholder="client id" class="col-lg-8"/>
+                                </div>
+                                <div class="row">
+                                    <field name="nis2_portal_client_secret" password="True" placeholder="secret" class="col-lg-8"/>
+                                </div>
+                                <button name="action_nis2_test_connection" type="object"
+                                        string="Test connection" class="btn-secondary mt8" icon="fa-plug"/>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

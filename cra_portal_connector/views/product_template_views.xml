@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- CRA Compliance tab on the product form -->
+    <record id="product_template_form_view_cra" model="ir.ui.view">
+        <field name="name">product.template.form.cra</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="CRA Compliance" name="cra_compliance">
+                    <group>
+                        <group string="Keurmerk status">
+                            <field name="cra_status" widget="badge"
+                                   decoration-success="cra_status == 'green'"
+                                   decoration-warning="cra_status == 'amber'"
+                                   decoration-danger="cra_status == 'red'"/>
+                            <field name="cra_auth_code"/>
+                            <field name="cra_last_sync"/>
+                        </group>
+                        <group string="Links">
+                            <field name="cra_verify_url" widget="url" readonly="1"/>
+                            <field name="cra_badge_url" widget="url" readonly="1"/>
+                        </group>
+                    </group>
+                    <div class="mt-2 mb-3">
+                        <button name="action_cra_fetch_status" type="object"
+                                string="Refresh CRA status" class="btn-primary" icon="fa-refresh"/>
+                        <button name="action_cra_open_verify" type="object"
+                                string="Open verify page" class="btn-secondary" icon="fa-shield"/>
+                        <button name="action_cra_open_incident_tool" type="object"
+                                string="Incident-response tool" class="btn-secondary" icon="fa-bolt"/>
+                    </div>
+                    <p class="text-muted">
+                        Status is matched to CRA-Portal on the product's <b>Internal Reference (SKU)</b>.
+                        Configure the connection under Settings &#8594; CRA-Portal.
+                    </p>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
