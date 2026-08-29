@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "NIS2-Portal Connector",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Industries",
     "summary": "Show your organisation's NIS2 (Directive (EU) 2022/2555) readiness inside Odoo — traffic-light status, Article 21 score and keurmerk.",
     "description": """

@@ -6,16 +6,16 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     nis2_portal_base_url = fields.Char(
-        string="CRA-Portal base URL",
+        string="NIS2-Portal base URL",
         config_parameter="nis2_portal_connector.base_url",
         default="https://dev.cra-portal.eu",
     )
     nis2_portal_client_id = fields.Char(
-        string="Partner-API client id",
+        string="NIS2 Partner-API client id",
         config_parameter="nis2_portal_connector.client_id",
     )
     nis2_portal_client_secret = fields.Char(
-        string="Partner-API secret",
+        string="NIS2 Partner-API secret",
         config_parameter="nis2_portal_connector.client_secret",
     )
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "CRA-Portal Connector",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Industries",
     "summary": "Bring Cyber Resilience Act (CRA) compliance status into Odoo — product keurmerk, verify links and the 24h/72h incident process.",
     "description": """
