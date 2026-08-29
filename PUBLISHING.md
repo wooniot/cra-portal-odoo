@@ -33,8 +33,17 @@
 4. **Use** — give products an Internal Reference (SKU) that matches CRA-Portal, then **Action → Sync CRA status**. NIS2 → Readiness shows the org status.
 5. **Lifecycle** — if the subscription lapses the Partner-API returns 402 and the connector stops surfacing Pro data; renewing restores it. No re-install needed.
 
+## How to publish — verified mechanism (apps.odoo.com/apps/upload)
+There is **no separate "partner" login**. You publish like this:
+1. Go to **apps.odoo.com/apps/upload** ("Submit your Apps & Themes") and **sign in with your normal Odoo account** (the same odoo.com login as our Viertron Odoo).
+2. **Register a public Git repository** — Odoo pulls the module from git per Odoo version/branch. So the module folder must live in a **public** repo (ours is currently private → either make a public mirror with just the two module folders, or a dedicated public repo).
+3. **Pricing is set in the manifest**: add `'price': 49.99, 'currency': 'EUR'` (only **EUR/USD** supported). Leave it out = free. Odoo requires the price be the **lowest on the web**, plus a proper description page + screenshots (both now done).
+4. Odoo reviews the presentation/quality and can unpublish listings without a proper page.
+
+> Consequence for our two-layer model: the **recurring** revenue is our CRA-Portal subscription (billed by us), so the module itself is best published **free** — no need to expose a public paid price, and the repo can be a clean public mirror.
+
 ## To publish (do-list)
-- Create an **Odoo publisher account** on apps.odoo.com (entity: Woon IoT / NLFtech).
+- Sign in at **apps.odoo.com/apps/upload** with the Odoo account (entity: Woon IoT / NLFtech) and register the repo.
 - Per module: name, category *Industries*, `static/description/index.html`, `icon.png`, `banner.png`, **screenshots from a running instance**, price + licence, support e-mail (info@cra-portal.eu).
 - Add a **DPA / GDPR** addendum (connector sends product/org identifiers to our SaaS) + terms.
 - Submit each module (git or zip), pick target Odoo version(s) (now 19.0; also 17/18 branches), pass Odoo's technical review, and request **Online compatibility** review.
