@@ -5,6 +5,7 @@ from odoo import api, fields, models
 class Nis2PortalStatus(models.TransientModel):
     _name = "nis2.portal.status"
     _description = "NIS2 readiness (CRA-Portal)"
+    _rec_name = "entity"
 
     entity = fields.Char(string="Organisation", readonly=True)
     status = fields.Selection(
