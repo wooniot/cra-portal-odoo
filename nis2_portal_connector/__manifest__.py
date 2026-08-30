@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "NIS2-Portal Connector",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.1.0",
     "category": "Industries",
     "summary": "Show your organisation's NIS2 (Directive (EU) 2022/2555) readiness inside Odoo - traffic-light status, Article 21 score and conformity mark.",
     "description": """
@@ -33,6 +33,7 @@ or personal data is transmitted; you keep ownership of your data at all times.
         "views/res_config_settings_views.xml",
         "views/nis2_views.xml",
         "views/nis2_menus.xml",
+        "views/nis2_incident_views.xml",
     ],
     "images": ["static/description/banner.png"],
     "installable": True,
