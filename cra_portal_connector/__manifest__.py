@@ -16,7 +16,13 @@ Connects Odoo to the CRA-Portal SaaS (Cyber Resilience Act — Regulation (EU) 2
   tool (24h/72h reporting process + tabletop drill).
 
 Odoo is the base ERP; CRA-Portal delivers the compliance engine. Configure your
-Partner-API key under Settings → CRA-Portal.
+Partner-API key under Settings -> CRA-Portal.
+
+External service and data: this module requires an active CRA-Portal account and
+Partner-API key. It sends only the product Internal Reference (SKU) and name of the
+products you sync, plus your organisation identifier, over HTTPS, authenticated by
+your Partner-API key. No end-customer, financial or personal data is transmitted;
+you keep ownership of your data at all times.
 """,
     "author": "Woon IoT BV (CRA-Portal)",
     "website": "https://cra-portal.eu",
