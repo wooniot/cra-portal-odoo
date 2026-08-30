@@ -3,17 +3,23 @@
     "name": "CRA-Portal Connector",
     "version": "19.0.1.0.0",
     "category": "Industries",
-    "summary": "Bring Cyber Resilience Act (CRA) compliance status into Odoo - product keurmerk, verify links and the 24h/72h incident process.",
+    "summary": "Cybersecurity compliance for the EU Cyber Resilience Act (CRA): product security status, CE-marking conformity, verify links and the 24h/72h incident process in Odoo.",
     "description": """
-CRA-Portal Connector
-====================
-Connects Odoo to the CRA-Portal SaaS (Cyber Resilience Act - Regulation (EU) 2024/2847).
+CRA-Portal Connector - Cyber Resilience Act (CRA) cybersecurity compliance
+==========================================================================
+Connects Odoo to the CRA-Portal service for the EU Cyber Resilience Act
+(CRA, Regulation (EU) 2024/2847). Built for manufacturers, importers and
+distributors of products with digital elements who must meet the CRA's
+cybersecurity, vulnerability-handling and CE-marking obligations.
 
-* A **CRA Compliance** tab on products showing the live keurmerk status
+* A **CRA Compliance** tab on products showing the live conformity status
   (compliant / in progress / not compliant), the public verify link and badge.
 * One-click **Sync CRA status** - matches Odoo products to CRA-Portal on SKU.
 * Quick links to the CRA-Portal dashboard and the self-service incident-response
   tool (24h/72h reporting process + tabletop drill).
+
+Keywords: cybersecurity, cyber resilience act, CRA, product security, CE marking,
+conformity, vulnerability, SBOM, EU 2024/2847, compliance, NIS2.
 
 Odoo is the base ERP; CRA-Portal delivers the compliance engine. Configure your
 Partner-API key under Settings -> CRA-Portal.

@@ -25,7 +25,7 @@
                             <field name="score"/>
                             <field name="checked_at"/>
                         </group>
-                        <group string="Keurmerk">
+                        <group string="Conformity mark">
                             <field name="auth_code"/>
                             <field name="verify_url" widget="url" readonly="1"/>
                             <field name="badge_url" widget="url" readonly="1"/>

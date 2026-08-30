@@ -1,0 +1,332 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cra_portal_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260817\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-30 07:28+0000\n"
+"PO-Revision-Date: 2026-08-30 07:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/product_template.py:0
+msgid "%s product(s) matched on SKU and updated."
+msgstr "%s product(en) gematcht op SKU en bijgewerkt."
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "Base URL"
+msgstr "Basis-URL"
+
+#. module: cra_portal_connector
+#: model:ir.ui.menu,name:cra_portal_connector.menu_cra_root
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.product_template_form_view_cra
+msgid "CRA Compliance"
+msgstr "CRA-compliance"
+
+#. module: cra_portal_connector
+#: model:ir.actions.act_window,name:cra_portal_connector.action_cra_products
+msgid "CRA Products"
+msgstr "CRA-producten"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_product__cra_auth_code
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_template__cra_auth_code
+msgid "CRA auth code"
+msgstr "CRA-autorisatiecode"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_product__cra_badge_url
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_template__cra_badge_url
+msgid "CRA badge (SVG)"
+msgstr "CRA-badge (SVG)"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_product__cra_last_sync
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_template__cra_last_sync
+msgid "CRA last synced"
+msgstr "CRA laatst gesynct"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.view_cra_product_tree
+msgid "CRA products"
+msgstr "CRA-producten"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_product__cra_status
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_template__cra_status
+msgid "CRA status"
+msgstr "CRA-status"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/product_template.py:0
+msgid "CRA sync"
+msgstr "CRA-synchronisatie"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_product__cra_verify_url
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_template__cra_verify_url
+msgid "CRA verify link"
+msgstr "CRA-verificatielink"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "CRA-Portal"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.model,name:cra_portal_connector.model_cra_portal_client
+msgid "CRA-Portal API client"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_res_config_settings__cra_portal_base_url
+msgid "CRA-Portal base URL"
+msgstr "CRA-Portal basis-URL"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/res_config_settings.py:0
+msgid "CRA-Portal connected"
+msgstr "CRA-Portal verbonden"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "CRA-Portal connection"
+msgstr "CRA-Portal-verbinding"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid "CRA-Portal rate limit reached (429). Try again shortly."
+msgstr "CRA-Portal-limiet bereikt (429). Probeer het zo opnieuw."
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid "CRA-Portal rejected the API key (401). Check the client id and secret."
+msgstr ""
+"CRA-Portal weigerde de API-sleutel (401). Controleer de client-id en secret."
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid "CRA-Portal returned a non-JSON response."
+msgstr "CRA-Portal gaf een niet-JSON-antwoord."
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid "CRA-Portal returned an unexpected response (HTTP %s)."
+msgstr "CRA-Portal gaf een onverwacht antwoord (HTTP %s)."
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid ""
+"Client id and secret issued by CRA-Portal (scopes: products:read, "
+"keurmerk:read)."
+msgstr ""
+"Client-id en secret uitgegeven door CRA-Portal (scopes: products:read, "
+"keurmerk:read)."
+
+#. module: cra_portal_connector
+#: model:ir.model.fields.selection,name:cra_portal_connector.selection__product_template__cra_status__green
+msgid "Compliant"
+msgstr "Conform"
+
+#. module: cra_portal_connector
+#: model:ir.model,name:cra_portal_connector.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuratie-instellingen"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid ""
+"Configure your CRA-Portal Partner-API key under Settings → CRA-Portal first."
+msgstr ""
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.product_template_form_view_cra
+msgid "Conformity status"
+msgstr "Keurmerkstatus"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid "Could not reach CRA-Portal (%s)."
+msgstr "CRA-Portal niet bereikbaar (%s)."
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_cra_portal_client__display_name
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_template__display_name
+#: model:ir.model.fields,field_description:cra_portal_connector.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: cra_portal_connector
+#: model_terms:ir.actions.act_window,help:cra_portal_connector.action_cra_products
+msgid ""
+"Give your products an Internal Reference (SKU) that matches CRA-Portal,\n"
+"               then use <b>Action → Sync CRA status</b> to pull their conformity status."
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_cra_portal_client__id
+#: model:ir.model.fields,field_description:cra_portal_connector.field_product_template__id
+#: model:ir.model.fields,field_description:cra_portal_connector.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.model.fields.selection,name:cra_portal_connector.selection__product_template__cra_status__amber
+msgid "In progress"
+msgstr "In behandeling"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.product_template_form_view_cra
+msgid "Incident-response tool"
+msgstr "Incident-response tool"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.product_template_form_view_cra
+msgid "Links"
+msgstr "Links"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,help:cra_portal_connector.field_product_product__cra_status
+#: model:ir.model.fields,help:cra_portal_connector.field_product_template__cra_status
+msgid ""
+"Live conformity status pulled from CRA-Portal, matched on the product SKU."
+msgstr ""
+"Live keurmerkstatus opgehaald uit CRA-Portal, gematcht op de product-SKU."
+
+#. module: cra_portal_connector
+#: model_terms:ir.actions.act_window,help:cra_portal_connector.action_cra_products
+msgid "No products with an SKU yet"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.model.fields.selection,name:cra_portal_connector.selection__product_template__cra_status__red
+msgid "Not compliant"
+msgstr "Niet conform"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.product_template_form_view_cra
+msgid "Open verify page"
+msgstr "Verificatiepagina openen"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_res_config_settings__cra_portal_client_id
+msgid "Partner-API client id"
+msgstr "Partner-API client-id"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "Partner-API key"
+msgstr "Partner-API-sleutel"
+
+#. module: cra_portal_connector
+#: model:ir.model.fields,field_description:cra_portal_connector.field_res_config_settings__cra_portal_client_secret
+msgid "Partner-API secret"
+msgstr "Partner-API-secret"
+
+#. module: cra_portal_connector
+#: model:ir.model,name:cra_portal_connector.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.ui.menu,name:cra_portal_connector.menu_cra_products
+msgid "Products"
+msgstr "Producten"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.product_template_form_view_cra
+msgid "Refresh CRA status"
+msgstr "CRA-status vernieuwen"
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.view_cra_product_tree
+msgid "SKU"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.product_template_form_view_cra
+msgid ""
+"Status is matched to CRA-Portal on the product's <b>Internal Reference (SKU)</b>.\n"
+"                        Configure the connection under Settings → CRA-Portal."
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.actions.server,name:cra_portal_connector.action_server_cra_sync_all
+msgid "Sync CRA status (all)"
+msgstr "CRA-status synchroniseren (alle)"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/res_config_settings.py:0
+msgid "Tenant: %(t)s · plan: %(b)s · scopes: %(s)s"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "Test connection"
+msgstr "Verbinding testen"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid "The API key is missing the required scope (403)."
+msgstr "De API-sleutel mist de vereiste scope (403)."
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "The CRA-Portal instance you connect to."
+msgstr ""
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid ""
+"The Python library 'requests' is required for the CRA-Portal connector. "
+"Install it on the Odoo server (pip install requests)."
+msgstr ""
+
+#. module: cra_portal_connector
+#: model:ir.model.fields.selection,name:cra_portal_connector.selection__product_template__cra_status__unknown
+msgid "Unknown / not synced"
+msgstr "Onbekend / niet gesynct"
+
+#. module: cra_portal_connector
+#. odoo-python
+#: code:addons/cra_portal_connector/models/cra_portal_client.py:0
+msgid ""
+"Your CRA-Portal subscription is not active (402). Check your plan/billing."
+msgstr ""
+"Je CRA-Portal-abonnement is niet actief (402). Controleer je "
+"abonnement/facturatie."
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "client id"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "https://dev.cra-portal.eu"
+msgstr ""
+
+#. module: cra_portal_connector
+#: model_terms:ir.ui.view,arch_db:cra_portal_connector.res_config_settings_view_form_cra
+msgid "secret"
+msgstr ""
