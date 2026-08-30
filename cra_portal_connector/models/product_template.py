@@ -18,7 +18,7 @@ class ProductTemplate(models.Model):
         default="unknown",
         readonly=True,
         copy=False,
-        help="Live keurmerk status pulled from CRA-Portal, matched on the product SKU.",
+        help="Live conformity status pulled from CRA-Portal, matched on the product SKU.",
     )
     cra_auth_code = fields.Char(string="CRA auth code", readonly=True, copy=False)
     cra_verify_url = fields.Char(string="CRA verify link", readonly=True, copy=False)

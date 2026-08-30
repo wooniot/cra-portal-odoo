@@ -9,7 +9,7 @@
             <xpath expr="//notebook" position="inside">
                 <page string="CRA Compliance" name="cra_compliance">
                     <group>
-                        <group string="Keurmerk status">
+                        <group string="Conformity status">
                             <field name="cra_status" widget="badge"
                                    decoration-success="cra_status == 'green'"
                                    decoration-warning="cra_status == 'amber'"

@@ -1,0 +1,302 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nis2_portal_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260817\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-30 07:28+0000\n"
+"PO-Revision-Date: 2026-08-30 07:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__score
+msgid "Article 21 score"
+msgstr "Artikel 21-score"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__auth_code
+msgid "Auth code"
+msgstr "Autorisatiecode"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__badge_url
+msgid "Badge (SVG)"
+msgstr "Badge (SVG)"
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "Base URL"
+msgstr "Basis-URL"
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/res_config_settings.py:0
+msgid "CRA-Portal connected"
+msgstr "CRA-Portal verbonden"
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid "CRA-Portal rejected the API key (401). Check client id/secret."
+msgstr ""
+"CRA-Portal weigerde de API-sleutel (401). Controleer client-id/secret."
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid "CRA-Portal returned a non-JSON response."
+msgstr "CRA-Portal gaf een niet-JSON-antwoord."
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid "CRA-Portal returned an unexpected response (HTTP %s)."
+msgstr "CRA-Portal gaf een onverwacht antwoord (HTTP %s)."
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__checked_at
+msgid "Checked at"
+msgstr "Gecontroleerd op"
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "Client id and secret issued by CRA-Portal (scope: nis2:read)."
+msgstr "Client-id en secret uitgegeven door CRA-Portal (scope: nis2:read)."
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields.selection,name:nis2_portal_connector.selection__nis2_portal_status__status__green
+msgid "Compliant"
+msgstr "Conform"
+
+#. module: nis2_portal_connector
+#: model:ir.model,name:nis2_portal_connector.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuratie-instellingen"
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid ""
+"Configure your CRA-Portal Partner-API key under Settings -> NIS2-Portal "
+"first."
+msgstr ""
+"Stel eerst je CRA-Portal Partner-API-sleutel in onder Instellingen -> "
+"NIS2-Portal."
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.view_nis2_status_form
+msgid "Conformity mark"
+msgstr "Keurmerk"
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid "Could not reach CRA-Portal (%s)."
+msgstr "CRA-Portal niet bereikbaar (%s)."
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_client__display_name
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__display_name
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_client__id
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__id
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields.selection,name:nis2_portal_connector.selection__nis2_portal_status__status__amber
+msgid "In progress"
+msgstr "In behandeling"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.ui.menu,name:nis2_portal_connector.menu_nis2_root
+msgid "NIS2"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.view_nis2_status_form
+msgid ""
+"NIS2 (Directive (EU) 2022/2555) readiness, pulled live from CRA-Portal.\n"
+"                        Configure the connection under Settings → NIS2-Portal."
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_res_config_settings__nis2_portal_client_id
+msgid "NIS2 Partner-API client id"
+msgstr "NIS2 Partner-API client-id"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_res_config_settings__nis2_portal_client_secret
+msgid "NIS2 Partner-API secret"
+msgstr "NIS2 Partner-API-secret"
+
+#. module: nis2_portal_connector
+#: model:ir.actions.act_window,name:nis2_portal_connector.action_nis2_status
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.view_nis2_status_form
+msgid "NIS2 readiness"
+msgstr "NIS2-gereedheid"
+
+#. module: nis2_portal_connector
+#: model:ir.model,name:nis2_portal_connector.model_nis2_portal_status
+msgid "NIS2 readiness (CRA-Portal)"
+msgstr "NIS2-gereedheid (CRA-Portal)"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__status
+msgid "NIS2 status"
+msgstr "NIS2-status"
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "NIS2-Portal"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.model,name:nis2_portal_connector.model_nis2_portal_client
+msgid "NIS2-Portal API client"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_res_config_settings__nis2_portal_base_url
+msgid "NIS2-Portal base URL"
+msgstr "NIS2-Portal basis-URL"
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "NIS2-Portal connection"
+msgstr "NIS2-Portal-verbinding"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields.selection,name:nis2_portal_connector.selection__nis2_portal_status__status__red
+msgid "Not compliant"
+msgstr "Niet conform"
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.view_nis2_status_form
+msgid "Open verify page"
+msgstr "Verificatiepagina openen"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__entity
+msgid "Organisation"
+msgstr "Organisatie"
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "Partner-API key"
+msgstr "Partner-API-sleutel"
+
+#. module: nis2_portal_connector
+#: model:ir.ui.menu,name:nis2_portal_connector.menu_nis2_status
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.view_nis2_status_form
+msgid "Readiness"
+msgstr "Gereedheid"
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.view_nis2_status_form
+msgid "Refresh"
+msgstr "Vernieuwen"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__label
+msgid "Status label"
+msgstr "Statuslabel"
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/res_config_settings.py:0
+msgid "Tenant: %(t)s · scopes: %(s)s"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "Test connection"
+msgstr "Verbinding testen"
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid "The API key is missing the 'nis2:read' scope (403)."
+msgstr "De API-sleutel mist de 'nis2:read'-scope (403)."
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "The CRA-Portal instance you connect to."
+msgstr ""
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid ""
+"The Python library 'requests' is required. Install it on the Odoo server."
+msgstr ""
+"De Python-bibliotheek 'requests' is vereist. Installeer die op de Odoo-"
+"server."
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields.selection,name:nis2_portal_connector.selection__nis2_portal_status__status__unknown
+msgid "Unknown / not configured"
+msgstr "Onbekend / niet geconfigureerd"
+
+#. module: nis2_portal_connector
+#: model:ir.model.fields,field_description:nis2_portal_connector.field_nis2_portal_status__verify_url
+msgid "Verify link"
+msgstr "Verificatielink"
+
+#. module: nis2_portal_connector
+#. odoo-python
+#: code:addons/nis2_portal_connector/models/nis2_portal_client.py:0
+msgid "Your CRA-Portal subscription is not active (402)."
+msgstr "Je CRA-Portal-abonnement is niet actief (402)."
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.view_nis2_status_form
+msgid "Your organisation"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "client id"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "https://dev.cra-portal.eu"
+msgstr ""
+
+#. module: nis2_portal_connector
+#: model_terms:ir.ui.view,arch_db:nis2_portal_connector.res_config_settings_view_form_nis2
+msgid "secret"
+msgstr ""
