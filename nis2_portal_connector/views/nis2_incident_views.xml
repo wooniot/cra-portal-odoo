@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_nis2_incident_report_form" model="ir.ui.view">
+        <field name="name">nis2.incident.report.form</field>
+        <field name="model">nis2.incident.report</field>
+        <field name="arch" type="xml">
+            <form string="Report NIS2 incident">
+                <p>Report a significant incident to CRA-Portal for the NIS2 (Directive (EU)
+                   2022/2555) Article 23 reporting timeline (early warning / notification / final report).</p>
+                <group>
+                    <field name="title"/>
+                    <field name="severity"/>
+                    <field name="description"/>
+                </group>
+                <footer>
+                    <button name="action_submit" type="object" string="Report to CRA-Portal" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_nis2_incident_report" model="ir.actions.act_window">
+        <field name="name">Report NIS2 incident</field>
+        <field name="res_model">nis2.incident.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_nis2_incident" name="Report incident" parent="menu_nis2_root"
+              action="action_nis2_incident_report" sequence="20"/>
+</odoo>
