@@ -1,34 +1,25 @@
 # -*- coding: utf-8 -*-
 import logging
-
 from odoo import models, _
 from odoo.exceptions import UserError
-
 try:
     import requests
-except ImportError:  # pragma: no cover
+except ImportError:
     requests = None
-
 _logger = logging.getLogger(__name__)
-
 DEFAULT_BASE_URL = "https://dev.cra-portal.eu"
-
-
 class CraPortalClient(models.AbstractModel):
-    """Thin client for the CRA-Portal Partner-API (HTTP Basic, scope-gated)."""
-
+    """API client"""
     _name = "cra.portal.client"
     _description = "CRA-Portal API client"
-
     def _cra_config(self):
         icp = self.env["ir.config_parameter"].sudo()
         base = (icp.get_param("cra_portal_connector.base_url") or DEFAULT_BASE_URL).rstrip("/")
         client_id = icp.get_param("cra_portal_connector.client_id") or ""
         secret = icp.get_param("cra_portal_connector.client_secret") or ""
         return base, client_id, secret
-
     def _cra_get(self, path, timeout=20):
-        """GET a Partner-API endpoint and return parsed JSON, or raise UserError."""
+        """GET endpoint and return JSON or raise UserError."""
         if requests is None:
             raise UserError(_("The Python library 'requests' is required for the CRA-Portal connector. "
                               "Install it on the Odoo server (pip install requests)."))
@@ -42,10 +33,9 @@ class CraPortalClient(models.AbstractModel):
                 url, auth=(client_id, secret), timeout=timeout,
                 headers={"Accept": "application/json"},
             )
-        except Exception as exc:  # noqa: BLE001 - surface any network error to the user
+        except Exception as exc:
             _logger.warning("CRA-Portal request failed: %s", type(exc).__name__)
             raise UserError(_("Could not reach CRA-Portal (%s).") % exc)
-
         if resp.status_code == 401:
             raise UserError(_("CRA-Portal rejected the API key (401). Check the client id and secret."))
         if resp.status_code == 402:

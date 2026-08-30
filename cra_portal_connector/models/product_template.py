@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models, _
-
 INCIDENT_TOOL_URL = "https://cra-portal.eu/cra-incident-response/"
-
-
 class ProductTemplate(models.Model):
     _inherit = "product.template"
-
     cra_status = fields.Selection(
         selection=[
             ("green", "Compliant"),
@@ -24,25 +20,18 @@ class ProductTemplate(models.Model):
     cra_verify_url = fields.Char(string="CRA verify link", readonly=True, copy=False)
     cra_badge_url = fields.Char(string="CRA badge (SVG)", readonly=True, copy=False)
     cra_last_sync = fields.Datetime(string="CRA last synced", readonly=True, copy=False)
-
     def action_cra_open_incident_tool(self):
         return {"type": "ir.actions.act_url", "url": INCIDENT_TOOL_URL, "target": "new"}
-
     def action_cra_open_verify(self):
         self.ensure_one()
         if not self.cra_verify_url:
             return self._cra_sync(self)
         return {"type": "ir.actions.act_url", "url": self.cra_verify_url, "target": "new"}
-
     def action_cra_fetch_status(self):
-        """Sync only the selected product(s)."""
         return self._cra_sync(self)
-
     @api.model
     def action_cra_sync_all(self):
-        """Header action: sync every product that has a SKU."""
         return self._cra_sync(self.search([("default_code", "!=", False)]))
-
     @api.model
     def _cra_sync(self, products):
         data = self.env["cra.portal.client"]._cra_get("/api/partner-api/keurmerk")
