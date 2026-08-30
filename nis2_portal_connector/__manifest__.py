@@ -3,14 +3,14 @@
     "name": "NIS2-Portal Connector",
     "version": "19.0.1.0.0",
     "category": "Industries",
-    "summary": "Show your organisation's NIS2 (Directive (EU) 2022/2555) readiness inside Odoo — traffic-light status, Article 21 score and keurmerk.",
+    "summary": "Show your organisation's NIS2 (Directive (EU) 2022/2555) readiness inside Odoo - traffic-light status, Article 21 score and keurmerk.",
     "description": """
 NIS2-Portal Connector
 =====================
 A standalone connector that brings NIS2 organisation readiness from the CRA-Portal
-SaaS into Odoo. Independently installable — no dependency on the CRA product module.
+SaaS into Odoo. Independently installable - no dependency on the CRA product module.
 
-* **NIS2 readiness dashboard** — traffic-light status (compliant / in progress /
+* **NIS2 readiness dashboard** - traffic-light status (compliant / in progress /
   not compliant), the Article 21 measure score and your organisation keurmerk
   (auth code + public verify link and badge).
 * Configure your Partner-API key (scope ``nis2:read``) under Settings -> NIS2-Portal.
