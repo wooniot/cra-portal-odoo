@@ -23,7 +23,7 @@ by your Partner-API key, and reads back your NIS2 status. No end-customer, finan
 or personal data is transmitted; you keep ownership of your data at all times.
 """,
     "author": "Woon IoT BV (CRA-Portal)",
-    "website": "https://cra-portal.eu",
+    "website": "https://cra-portal.eu/odoo",
     "license": "LGPL-3",
     "depends": ["base"],
     "external_dependencies": {"python": ["requests"]},
