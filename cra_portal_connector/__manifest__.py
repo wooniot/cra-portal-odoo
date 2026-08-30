@@ -31,7 +31,7 @@ your Partner-API key. No end-customer, financial or personal data is transmitted
 you keep ownership of your data at all times.
 """,
     "author": "Woon IoT BV (CRA-Portal)",
-    "website": "https://cra-portal.eu",
+    "website": "https://cra-portal.eu/odoo",
     "license": "LGPL-3",
     "depends": ["product"],
     "external_dependencies": {"python": ["requests"]},
