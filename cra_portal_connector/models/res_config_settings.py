@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import fields, models, _
-
-
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
-
     cra_portal_base_url = fields.Char(
         string="CRA-Portal base URL",
         config_parameter="cra_portal_connector.base_url",
@@ -18,10 +15,8 @@ class ResConfigSettings(models.TransientModel):
         string="Partner-API secret",
         config_parameter="cra_portal_connector.client_secret",
     )
-
     def action_cra_test_connection(self):
         self.ensure_one()
-        # Persist the values that are currently in the form before testing.
         self.set_values()
         data = self.env["cra.portal.client"]._cra_get("/api/partner-api/me")
         tenant = (data or {}).get("tenant", {}).get("name") or "?"

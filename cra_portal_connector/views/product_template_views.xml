@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- CRA Compliance tab on the product form -->
     <record id="product_template_form_view_cra" model="ir.ui.view">
         <field name="name">product.template.form.cra</field>
         <field name="model">product.template</field>

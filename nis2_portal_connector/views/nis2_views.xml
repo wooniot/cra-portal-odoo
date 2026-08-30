@@ -39,7 +39,6 @@
             </form>
         </field>
     </record>
-
     <record id="action_nis2_status" model="ir.actions.act_window">
         <field name="name">NIS2 readiness</field>
         <field name="res_model">nis2.portal.status</field>

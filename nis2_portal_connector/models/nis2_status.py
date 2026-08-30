@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models
-
-
 class Nis2PortalStatus(models.TransientModel):
     _name = "nis2.portal.status"
     _description = "NIS2 readiness (CRA-Portal)"
     _rec_name = "entity"
-
     entity = fields.Char(string="Organisation", readonly=True)
     status = fields.Selection(
         selection=[
@@ -23,17 +20,13 @@ class Nis2PortalStatus(models.TransientModel):
     verify_url = fields.Char(string="Verify link", readonly=True)
     badge_url = fields.Char(string="Badge (SVG)", readonly=True)
     checked_at = fields.Datetime(string="Checked at", readonly=True)
-
     @api.model
     def default_get(self, fields_list):
         res = super().default_get(fields_list)
         res.update(self._fetch(soft=True))
         return res
-
     @api.model
     def _fetch(self, soft=False):
-        """Pull /nis2/status. When soft=True, swallow errors and show 'unknown'
-        (used on dashboard open); when soft=False, surface the error to the user."""
         try:
             data = self.env["nis2.portal.client"]._cra_get("/api/partner-api/nis2/status")
         except Exception:
@@ -51,7 +44,6 @@ class Nis2PortalStatus(models.TransientModel):
             "badge_url": data.get("badge_svg"),
             "checked_at": fields.Datetime.now(),
         }
-
     def action_refresh(self):
         self.ensure_one()
         self.write(self._fetch(soft=False))
@@ -62,7 +54,6 @@ class Nis2PortalStatus(models.TransientModel):
             "view_mode": "form",
             "target": "current",
         }
-
     def action_open_verify(self):
         self.ensure_one()
         if not self.verify_url:

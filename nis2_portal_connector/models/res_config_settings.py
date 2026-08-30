@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import fields, models, _
-
-
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
-
     nis2_portal_base_url = fields.Char(
         string="NIS2-Portal base URL",
         config_parameter="nis2_portal_connector.base_url",
@@ -18,7 +15,6 @@ class ResConfigSettings(models.TransientModel):
         string="NIS2 Partner-API secret",
         config_parameter="nis2_portal_connector.client_secret",
     )
-
     def action_nis2_test_connection(self):
         self.ensure_one()
         self.set_values()
