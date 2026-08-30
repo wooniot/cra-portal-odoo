@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "CRA-Portal Connector",
-    "version": "19.0.1.0.0",
+    "version": "19.0.2.0.0",
     "category": "Industries",
     "summary": "Cybersecurity compliance for the EU Cyber Resilience Act (CRA): product security status, CE-marking conformity, verify links and the 24h/72h incident process in Odoo.",
     "description": """
@@ -36,10 +36,12 @@ you keep ownership of your data at all times.
     "depends": ["product"],
     "external_dependencies": {"python": ["requests"]},
     "data": [
+        "security/ir.model.access.csv",
         "data/ir_config_parameter.xml",
         "views/res_config_settings_views.xml",
         "views/product_template_views.xml",
         "views/cra_menus.xml",
+        "views/cra_incident_views.xml",
     ],
     "images": ["static/description/banner.png"],
     "installable": True,

@@ -2,3 +2,4 @@
 from . import cra_portal_client
 from . import res_config_settings
 from . import product_template
+from . import cra_incident
