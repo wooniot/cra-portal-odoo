@@ -1,39 +1,38 @@
-<section style="font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:0 auto;color:#0b1a3a">
-  <div style="background:#003399;color:#fff;padding:28px 32px;border-radius:12px">
-    <h1 style="margin:0;font-size:30px">CRA-Portal Connector</h1>
-    <p style="margin:8px 0 0;font-size:16px;opacity:.9">Cyber Resilience Act compliance status inside Odoo — product keurmerk, verify links and the 24h/72h incident process.</p>
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <h1 class="oe_slogan" style="color:#003399; margin-bottom:8px">CRA-Portal Connector</h1>
+    <h3 class="oe_slogan" style="color:#5d6b86; font-weight:400">Cyber Resilience Act compliance status on your products, inside Odoo</h3>
   </div>
 
-  <h2 style="color:#003399;margin-top:26px">What it does</h2>
-  <ul style="font-size:15px;line-height:1.7">
-    <li><b>CRA Compliance tab on products</b> — live keurmerk status (compliant / in progress / not compliant), the public verify link and badge, matched to CRA-Portal on the product SKU.</li>
-    <li><b>One-click sync</b> — <i>Action &#8594; Sync CRA status</i> refreshes every product in a single call.</li>
-    <li><b>Incident-ready</b> — a direct link to the self-service incident-response tool: the CRA Article&nbsp;14 reporting process (RACI, 24h / 72h / final report) plus a tabletop drill.</li>
-    <li><b>NIS2</b> — organisation readiness is available via the companion <i>NIS2-Portal Connector</i> module.</li>
-  </ul>
+  <div class="oe_row oe_spaced">
+    <h2 style="color:#003399">What it does</h2>
+    <ul style="font-size:15px">
+      <li><b>CRA Compliance tab on products</b> — live keurmerk status (compliant / in progress / not compliant), the public verify link and badge, matched on the product Internal Reference (SKU).</li>
+      <li><b>One-click sync</b> — <i>Action &#8594; Sync CRA status</i> refreshes every product in a single call.</li>
+      <li><b>Incident-ready</b> — a link to the CRA Article&nbsp;14 incident-response process (24h / 72h / final report) with a tabletop drill.</li>
+      <li><b>NIS2</b> — organisation readiness is available via the companion NIS2-Portal Connector module.</li>
+    </ul>
+  </div>
 
-  <h2 style="color:#003399">Screenshots</h2>
-  <p style="margin:0 0 6px;font-size:14px;color:#5d6b86">CRA Compliance tab on a product · the CRA products list · the connection settings.</p>
-  <img src="screenshot_product_tab.png" style="width:100%;border:1px solid #e2e6f0;border-radius:8px;margin:8px 0"/>
-  <img src="screenshot_products.png" style="width:100%;border:1px solid #e2e6f0;border-radius:8px;margin:8px 0"/>
-  <img src="screenshot_settings.png" style="width:100%;border:1px solid #e2e6f0;border-radius:8px;margin:8px 0"/>
+  <div class="oe_row oe_spaced">
+    <h2 style="color:#003399">Screenshots</h2>
+    <img class="img-fluid" src="screenshot_product_tab.png" style="border:1px solid #e2e6f0; margin-bottom:12px"/>
+    <img class="img-fluid" src="screenshot_products.png" style="border:1px solid #e2e6f0; margin-bottom:12px"/>
+    <img class="img-fluid" src="screenshot_settings.png" style="border:1px solid #e2e6f0"/>
+  </div>
 
-  <h2 style="color:#003399">How it works</h2>
-  <p style="font-size:15px;line-height:1.7">Odoo is your base ERP; <b>CRA-Portal</b> (Regulation (EU) 2024/2847) delivers the compliance engine. This connector talks to your CRA-Portal Partner-API over a secure key. Configure it under <b>Settings &#8594; CRA-Portal</b> and press <i>Test connection</i>.</p>
+  <div class="oe_row oe_spaced">
+    <h2 style="color:#003399">External service &amp; data</h2>
+    <p style="font-size:15px">This module is a connector to the <b>CRA-Portal</b> compliance service (Regulation (EU) 2024/2847) and <b>requires an active CRA-Portal account and Partner-API key</b> to show data. Configure it under <i>Settings &#8594; CRA-Portal</i> and press <i>Test connection</i>.</p>
+    <p style="font-size:15px"><b>Data sent:</b> the connector sends only the product Internal Reference (SKU) and name of the products you choose to sync, plus your organisation identifier, over HTTPS, authenticated by your Partner-API key. No end-customer, financial or personal data is transmitted. Status data is written back onto your product records; you keep ownership of your data at all times. Support and Data Privacy Policy: cra-portal-support (see manifest support email).</p>
+  </div>
 
-  <h2 style="color:#003399">Requirements</h2>
-  <ul style="font-size:15px;line-height:1.7">
-    <li>An active CRA-Portal subscription and a Partner-API key (scopes <code>products:read</code>, <code>keurmerk:read</code>).</li>
-    <li>Python <code>requests</code> on the Odoo server.</li>
-  </ul>
-
-  <h2 style="color:#003399">Getting started</h2>
-  <ol style="font-size:15px;line-height:1.7">
-    <li>Subscribe at <a href="https://cra-portal.eu" style="color:#003399">cra-portal.eu</a> and generate a Partner-API key.</li>
-    <li>Install this module, open <b>Settings &#8594; CRA-Portal</b>, paste the key and press <i>Test connection</i>.</li>
-    <li>Give products an Internal Reference (SKU) that matches CRA-Portal and run <i>Action &#8594; Sync CRA status</i>.</li>
-  </ol>
-  <p style="font-size:15px;line-height:1.7"><b>Pricing:</b> the module is free. Compliance data is delivered through your CRA-Portal subscription (from &euro;49/month). See <a href="https://cra-portal.eu" style="color:#003399">cra-portal.eu</a> for tiers.</p>
-
-  <p style="font-size:13px;color:#5d6b86;margin-top:24px">Woon IoT BV · <a href="https://cra-portal.eu" style="color:#003399">cra-portal.eu</a> · info@cra-portal.eu — This module surfaces compliance status; it is not legal or security advice.</p>
+  <div class="oe_row oe_spaced">
+    <h2 style="color:#003399">Requirements</h2>
+    <ul style="font-size:15px">
+      <li>An active CRA-Portal account and a Partner-API key (scopes products:read, keurmerk:read).</li>
+      <li>Python <span style="font-family:monospace">requests</span> on the Odoo server.</li>
+    </ul>
+    <p style="color:#5d6b86; font-size:13px">This module surfaces compliance status; it is not legal or security advice.</p>
+  </div>
 </section>

@@ -16,6 +16,11 @@ SaaS into Odoo. Independently installable — no dependency on the CRA product m
 * Configure your Partner-API key (scope ``nis2:read``) under Settings -> NIS2-Portal.
 
 Odoo is the base ERP; CRA-Portal delivers the NIS2 assessment engine.
+
+External service and data: this module requires an active CRA-Portal account and
+Partner-API key. It sends only your organisation identifier over HTTPS, authenticated
+by your Partner-API key, and reads back your NIS2 status. No end-customer, financial
+or personal data is transmitted; you keep ownership of your data at all times.
 """,
     "author": "Woon IoT BV (CRA-Portal)",
     "website": "https://cra-portal.eu",
