@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cra_incident_report_form" model="ir.ui.view">
+        <field name="name">cra.incident.report.form</field>
+        <field name="model">cra.incident.report</field>
+        <field name="arch" type="xml">
+            <form string="Report CRA incident">
+                <p>Report an incident or vulnerability to CRA-Portal. It lands in your
+                   incident register for the CRA Article 14 process (24h / 72h / final report).</p>
+                <group>
+                    <field name="title"/>
+                    <field name="cra_report_stream"/>
+                    <field name="severity"/>
+                    <field name="description"/>
+                </group>
+                <footer>
+                    <button name="action_submit" type="object" string="Report to CRA-Portal" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_cra_incident_report" model="ir.actions.act_window">
+        <field name="name">Report CRA incident</field>
+        <field name="res_model">cra.incident.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_cra_incident" name="Report incident" parent="menu_cra_root"
+              action="action_cra_incident_report" sequence="20"/>
+</odoo>
