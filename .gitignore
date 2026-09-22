@@ -3,3 +3,10 @@ __pycache__/
 *.pyo
 .DS_Store
 *.zip
+
+# interne stukken horen niet in de publieke repo
+BLUEPRINT.md
+ECOSYSTEM_RESEARCH.md
+PUBLISHING.md
+LISTING.md
+ODOO_SELFHOST_MIGRATION_PLAN.md
