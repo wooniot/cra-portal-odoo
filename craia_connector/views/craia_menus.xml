@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="action_craia_dashboard" model="ir.actions.act_url">
+    <field name="name">CRAIA dashboard</field>
+    <field name="url">https://cra-portal.eu/craia/</field>
+    <field name="target">new</field>
+  </record>
+
+  <menuitem id="menu_craia_root" name="CRAIA"
+            parent="hr.menu_hr_root" sequence="90"/>
+  <menuitem id="menu_craia_dashboard" name="Open CRAIA dashboard"
+            parent="menu_craia_root" action="action_craia_dashboard" sequence="10"/>
+</odoo>

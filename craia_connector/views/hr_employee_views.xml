@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_employee_form_craia" model="ir.ui.view">
+    <field name="name">hr.employee.form.craia</field>
+    <field name="model">hr.employee</field>
+    <field name="inherit_id" ref="hr.view_employee_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//notebook" position="inside">
+        <page string="AI literacy" name="craia">
+          <group>
+            <group string="Status in CRAIA">
+              <field name="craia_status"/>
+              <field name="craia_geldig_tot"/>
+              <field name="craia_laatste_sync"/>
+            </group>
+            <group string="Actions">
+              <button name="action_craia_send" type="object"
+                      string="Send to CRAIA" class="btn-primary"/>
+              <button name="action_craia_refresh" type="object"
+                      string="Refresh status" class="btn-secondary"/>
+            </group>
+          </group>
+          <p class="text-muted">
+            Article 4 of the EU AI Act requires a sufficient level of AI literacy for
+            everyone operating an AI system on the organisation's behalf. Only name,
+            work email, job title and department are sent to CRAIA.
+          </p>
+        </page>
+      </xpath>
+    </field>
+  </record>
+
+  <record id="action_craia_send_employees" model="ir.actions.server">
+    <field name="name">Send to CRAIA</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="binding_model_id" ref="hr.model_hr_employee"/>
+    <field name="binding_view_types">list,form</field>
+    <field name="state">code</field>
+    <field name="code">action = records.action_craia_send()</field>
+  </record>
+</odoo>

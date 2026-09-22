@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="res_config_settings_view_form_craia" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.inherit.craia</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//form" position="inside">
+        <app data-string="CRAIA" string="CRAIA" name="craia_connector">
+          <block title="AI literacy (EU AI Act, Article 4)"
+                 name="craia_settings">
+            <setting string="Connection"
+                     help="Create a Partner-API key in CRA-Portal and paste it here.">
+              <div class="content-group">
+                <div class="row mt16">
+                  <label for="craia_base_url" class="col-lg-3 o_light_label"/>
+                  <field name="craia_base_url"/>
+                </div>
+                <div class="row">
+                  <label for="craia_client_id" class="col-lg-3 o_light_label"/>
+                  <field name="craia_client_id"/>
+                </div>
+                <div class="row">
+                  <label for="craia_client_secret" class="col-lg-3 o_light_label"/>
+                  <field name="craia_client_secret" password="True"/>
+                </div>
+                <div class="row mt8">
+                  <button name="action_craia_test" type="object"
+                          string="Test connection" class="btn-secondary"/>
+                </div>
+              </div>
+            </setting>
+          </block>
+        </app>
+      </xpath>
+    </field>
+  </record>
+</odoo>
